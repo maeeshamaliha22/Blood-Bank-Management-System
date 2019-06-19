@@ -21,7 +21,7 @@ namespace Blood_bank
         {
             if (!IsPostBack)
             {
-                //calling getData to bind the blood type data in the form
+                //calling getData function to bind the blood type data from database in the form
                 ddlBloodType.DataSource = GetData("SPGetBlood_Type_Table", null);
                 ddlBloodType.DataTextField = "BloodType";
                 ddlBloodType.DataValueField = "BloodID";
@@ -30,7 +30,7 @@ namespace Blood_bank
                 ListItem liBloodType = new ListItem("Select Blood Type", "-1");
                 ddlDistrict.Items.Insert(0, liBloodType);
 
-                //calling GetData to bind the district and city in the form
+                //calling GetData function to bind the district and city data from database in the form
                 ddlDistrict.DataSource = GetData("SPGetDistrict_Table", null);
                 ddlDistrict.DataTextField = "DistrictName";
                 ddlDistrict.DataValueField = "DistrictID";
