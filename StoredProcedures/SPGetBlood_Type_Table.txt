@@ -1,0 +1,18 @@
+-- =============================================
+-- Author:		Maeesha Maliha
+-- Create date: 6/19/2019
+-- Description:	
+-- =============================================
+CREATE PROCEDURE SPGetBlood_Type_Table
+
+
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	SELECT BloodID, BloodType from Blood_Type_Table
+	
+END

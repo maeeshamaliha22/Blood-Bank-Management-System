@@ -1,0 +1,66 @@
+-- =============================================
+-- Author:		Maeesha Maliha
+-- Create date: 6/19/2019
+-- Description:	
+-- =============================================
+CREATE SPInsertRegistrationValue
+@FullName varchar(20),
+@Password varchar(10),
+@Email varchar(20),
+@MobileNo int,
+@Age int,
+@Gender varchar(10),
+@BloodGroup varchar(10),
+@UserType varchar(20),
+@Height float,
+@Weight float,
+@District varchar(10),
+@City varchar(10),
+@Address varchar(50),
+@ImageName varchar(20),
+@ImageSize float,
+@ImagePath varchar(50)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+insert into Registration_Table (
+FullName,
+Password,
+Email,
+MobileNo,
+Age,
+Gender,
+BloodGroup,
+UserType,
+Height,
+Weight,
+District,
+City,
+Address,
+ImageName,
+ImageSize,
+ImagePath)
+
+values (
+@FullName,
+@Password,
+@Email,
+@MobileNo,
+@Age,
+@Gender,
+@BloodGroup,
+@UserType,
+@Height,
+@Weight,
+@District,
+@City,
+@Address,
+@ImageName,
+@ImageSize,
+@ImagePath)
+END
+

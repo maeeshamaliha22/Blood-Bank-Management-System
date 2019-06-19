@@ -1,0 +1,18 @@
+-- =============================================
+-- Author:		Maeesha Maliha
+-- Create date: 6/19/2019
+-- Description:	
+-- =============================================
+CREATE SPGetCity_TableByDistrictID
+@DistrictID int
+
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	SELECT CityID, CityName from City_Table
+	where DistrictID = @DistrictID
+END
